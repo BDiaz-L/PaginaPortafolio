@@ -16,19 +16,29 @@
 }
 
 #skillset span {
-    width: 120px;
-    background-color: rgba(0, 0, 0,0.75);
+    width: 5rem;
+    font-size: 0.8rem;
+    background-color: rgba(0, 0, 0, 0.75);
     text-align: center;
-    padding: .5rem 0;
+    padding: .5rem 0rem;
     border-radius: .5rem;
     position: absolute;
     z-index: 1;
     top: -40px;
-    left: 50%;
-    transform: translate(-60px,10px);
+    left: 75%;
+    transform: translate(-60px, 10px);
     opacity: 0;
     transition: opacity .3s ease, transform .3s ease;
-    pointer-events: none; /* is telling that this item will not interrupt cursor navigation */
+    pointer-events: none;
+    /* is telling that this item will not interrupt cursor navigation */
+}
+
+@media screen and (min-width:500px) {
+    #skillset span {
+        width: 120px;
+        font-size: 1rem;
+        left: 50%;
+    }
 }
 
 #skillset > div > div:hover span {
